@@ -4,7 +4,7 @@
 import pandas as pd
 from yelpapi import *
 
-from data import config
+from scripts import config
 
 #get client_id and client_secret from your Yelp app
 client_id = config.client_id
