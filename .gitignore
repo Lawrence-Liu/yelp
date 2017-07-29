@@ -1,1 +1,13 @@
 config.py
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/yelp.iml
+data/
+scripts/yelp_reviews/yelp_reviews/__init__.pyc
+scripts/yelp_reviews/yelp_reviews/items.pyc
+scripts/yelp_reviews/yelp_reviews/pipelines.pyc
+scripts/yelp_reviews/yelp_reviews/settings.pyc
+scripts/yelp_reviews/yelp_reviews/spiders/__init__.pyc
+scripts/yelp_reviews/yelp_reviews/spiders/scrapy_reviews.pyc
