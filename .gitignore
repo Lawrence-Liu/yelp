@@ -1,9 +1,5 @@
-data/config.py
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
-.idea/yelp.iml
+scripts/config.py
+.idea/
 data/
 scripts/yelp_reviews/yelp_reviews/__init__.pyc
 scripts/yelp_reviews/yelp_reviews/items.pyc
