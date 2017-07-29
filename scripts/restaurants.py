@@ -1,10 +1,10 @@
 
 # coding: utf-8
 
-from yelpapi import *
 import pandas as pd
-import config
+from yelpapi import *
 
+from data import config
 
 #get client_id and client_secret from your Yelp app
 client_id = config.client_id
