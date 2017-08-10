@@ -8,7 +8,7 @@
 import re
 
 from scrapy import signals
-from scrapy.contrib.exporter import CsvItemExporter
+from scrapy.exporters import CsvItemExporter
 
 
 class YelpReviewsPipeline(object):
@@ -27,7 +27,7 @@ class WriteCsvPipeline(object):
         return pipeline
 
     def spider_opened(self, spider):
-        self.file = open('~/PycharmProjects/yelp/data/reviews.csv', 'w+b')
+        self.file = open('/Users/lawrence/PycharmProjects/yelp/data/reviews.csv', 'w+b')
         self.exporter = CsvItemExporter(self.file)
         self.exporter.start_exporting()
 

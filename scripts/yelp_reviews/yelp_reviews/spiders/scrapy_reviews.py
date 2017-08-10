@@ -7,9 +7,17 @@ class ReviewSpider(scrapy.Spider):
     allowed_domains = ["yelp.com"]
     domain = "https://www.yelp.com/biz/"
 
-    def __init__(self, id=None):
-        self.id = id
-        self.start_urls = [ self.domain + self.id]
+    def start_requests(self):
+        with open('/Users/lawrence/PycharmProjects/yelp/data/restaurants.csv', 'r') as f:
+            f.readline()
+            for line in f:
+                id = line.split('|')[0]
+                url = self.domain + id
+                yield scrapy.Request(url)
+
+    # def __init__(self, id=None):
+    #     self.id = id
+    #     self.start_urls = [ self.domain + self.id]
 
 
     def parse(self, response):
@@ -22,7 +30,7 @@ class ReviewSpider(scrapy.Spider):
 
         for i in range(len(review_texts)):
             print i
-            yield YelpReviewsItem(id = self.id,
+            yield YelpReviewsItem(id = response.url.split('?')[0].split('/')[-1],
                                   user_name = user_names[i],
                                   review_date = review_dates[i],
                                   review_text = review_texts[i],
