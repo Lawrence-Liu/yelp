@@ -1,4 +1,3 @@
-scripts/config.py
 .idea/
 data/
 scripts/yelp_reviews/yelp_reviews/__init__.pyc
